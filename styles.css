@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('stream_me\ login.png') no-repeat center center/cover;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed; /* Background remains fixed during scroll */
+}
+
+form {
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+form * {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder {
+    color: #e5e5e5;
+}
+button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #f5f5f5;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+}
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.login-header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.login-header h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ensure navbar stretches across the page */
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+    padding: 10px 20px; /* Adjust padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .menu {
+    display: flex; /* Ensure menu items are displayed in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar .menu a {
+    margin-left: 20px; /* Space between menu items */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px; /* Increased font size for navbar links */
+    font-weight: bold; /* Make navbar links bold */
+}
+
+.navbar .menu a:hover {
+    color: #007BFF;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-left: 20px; /* Space between items */
+}
+
+
+/* Content container */
+.about-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter background for readability */
+    padding: 30px; /* Increased padding for more space */
+    border-radius: 15px; /* Softer, rounder corners */
+    max-width: 700px; /* Increased width for a wider layout */
+    margin: 10px auto 0; /* Centers the container vertically */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+    color: #333; /* Darker text for better contrast */
+    font-size: 18px; /* Slightly larger font for readability */
+}
+
+.about-container h1 {
+    color: #007BFF; /* Change to a blue tone for better contrast */
+    margin-bottom: 20px; /* Adds space between title and content */
+}
+
+.about-container p {
+    line-height: 1.6; /* Improves text spacing */
+    font-size: 16px;
+    color: #555; /* Lighter gray for text */
+    margin-bottom: 15px;
+}
+
+.about-container a {
+    color: #007BFF; /* Matches the header */
+    text-decoration: underline; /* Underlines the link to make it stand out */
+}
+
+.about-container a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Fix navbar overlapping on scroll */
+html {
+    scroll-behavior: smooth;
+    padding-top: 60px; /* Prevents content from going under the navbar */
+}
+html, body {
+    height: 100%; /* Ensure height is 100% of the viewport */
+    margin: 0;
+    padding-top: 60px; /* Prevents navbar overlap on page content */
+    overflow-x: hidden;
+}
+
+
+/* Cart button and section styling */
+.add-to-cart-section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-left: auto; /* Push to the right */
+}
+
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 64px !important;
+    height: 64px !important;
+    margin-right: 10px; /* Adjusts spacing */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #007BFF; /* Blue circle outline */
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-button:hover .cart-icon {
+    transform: scale(1.1); /* Slight enlargement on hover */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Blue shadow on hover */
+}
+
+
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px; /* More rounded edges for individual product */
+}
+
+.product-item img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-info {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.product-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+/* Navbar cart icon styling */
+.navbar-cart-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#cart-item-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007BFF;
+    vertical-align: middle;
+}
+
+.product-container {
+    max-height: 100vh; /* Ensures container doesn't exceed screen height */
+    max-width: 1000px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Optional: Add padding for spacing */
+}
+.invoice-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+/* Add styles for the dropdown */
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px; /* Space above the dropdown */
+    z-index: 1001; /* Ensure dropdown is on top */
+}
+
+/* Adjust dropdown content position to the left */
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px; /* Space above the dropdown */
+    z-index: 1001; /* Ensure dropdown is on top */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0; /* Align dropdown to the left */
+    top: 100%; /* Position below the dropdown trigger */
+    background-color: rgba(255, 255, 255, 0.9); /* Match other container styles */
+    min-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+    z-index: 1001; /* Higher z-index for visibility */
+    padding: 10px;
+    border-radius: 5px; /* Softer corners */
+    transition: opacity 0.2s ease, visibility 0.2s ease; /* Smooth transition for visibility */
+    opacity: 0; /* Start with invisible */
+    visibility: hidden; /* Hidden by default */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Make it block to apply opacity */
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make visible */
+}
+
+/* Add padding and font size for dropdown items */
+.dropdown-content h3 {
+    margin: 0 0 10px; /* Space below the title */
+}
+
+.dropdown-content div {
+    padding: 8px 10px; /* Padding around dropdown items */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Darker text for better contrast */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content div:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+}
+
+/* Prevent dropdown from being cut off */
+.dropdown-content {
+    max-height: 300px; /* Set a max-height for the dropdown */
+    overflow-y: auto; /* Allow scrolling if content exceeds max height */
+}

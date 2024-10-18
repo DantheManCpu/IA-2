@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Stream.Me Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="stream_me logo.png" alt="Home" width="20" height="20">
+        <div class="menu">
+            <a href="products.html">Products</a>
+            <a href="about us.html">About Us</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)">
+                    <img src="shopping_cart_checkout_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="navbar-cart-icon"> 
+                    <span>Cart (<span id="cart-item-count">0</span>)</span>
+                </a>
+                <div class="dropdown-content" id="cart-dropdown">
+                    <h3>Your Cart</h3>
+                    <div id="cart-items-container"></div>
+                    <button class="checkout-button" id="checkout-button" style="display: none;">Checkout</button>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-item">
+            <img src="Canon EOS R5.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>Cannon EOS5</h2>
+                <p>High-quality camera for professional streaming. </p>
+                <p>Features advanced autofocus, 4K video capability, and exceptional image quality.</p>
+                <p>Cost: $12,000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('Cannon EOS5', 12000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="atem-mini-pro.jpg" alt="switcher">
+            <div class="product-info">
+                <h2>Atem-Mini-Pro</h2>
+                <p>Compact live production switcher for high-quality streaming and broadcasting.</p>
+                <p>Supports multiple video sources and real-time switching.</p>
+                <p>Cost: $10,000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('atem-mini-pro', 10000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="Hollyland Lark Max Wireless Lavalier Microphone.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>Hollyland Lark Max Wireless Lavalier Microphone</h2>
+                <p>Wireless microphone system ideal for vloggers and content creators, offering clear audio quality and easy setup.</p>
+                <p>Cost: $4000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('Hollyland Lark Max Wireless Lavalier Microphone', 4000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="Panasonic X1500.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>Panasonic X1500 </h2>
+                <p>Versatile camcorder with 4K recording, perfect for both live streaming and video production.</p>
+                <p>Cost: $15,000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('Panasonic X1500 ', 15000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="NEEWER 2 Pack LED Video Light and Stand Kit.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>NEEWER 2 Pack LED Video Light and Stand Kit</h2>
+                <p>Professional LED lighting kit for optimal video quality.</p>
+                <p> Includes adjustable stands for flexibility.</p>
+                <p>Cost: $8000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('NEEWER 2 Pack LED Video Light and Stand Kit', 8000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="Elgato Green Screen.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>Elgato Green Screen</h2>
+                <p> Portable green screen for easy chroma keying in video production. </p>
+                <p>Lightweight and easy to set up.</p>
+                <p>Cost: $6000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('Elgato Green Screen', 6000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="RØDE RØDECaster Pro II.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>RØDE RØDECaster Pro II</h2>
+                <p> Comprehensive podcasting solution featuring built-in sound pads and multiple input options for high-quality audio production.</p>
+                <p>Cost: $12000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('RØDE RØDECaster Pro II', 12000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="Glide Gear TMP 750.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>Glide Gear TMP 750</h2>
+                <p>Professional teleprompter designed for seamless script reading during video production.</p>
+                <p>Cost: $7000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('Glide Gear TMP 750', 7000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="Glide Gear SNC100.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>Glide Gear SNC100 </h2>
+                <p>Professional-grade camera chest gimble for smooth, cinematic camera movements in video production.</p>
+                <p>Cost: $9000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('Glide Gear SNC100 ', 9000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="DJI Mini 2 SE Fly More.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>DJI Mini 2 SE Fly More</h2>
+                <p>Compact drone with excellent camera quality for aerial photography and videography.</p>
+                <p>Cost: $15000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('DJI Mini 2 SE Fly More EOS5', 15000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="DJI Osmo Pocket 3.jpg" alt="Camera">
+            <div class="product-info">
+                <h2>DJI Osmo Pocket 3</h2>
+                <p>Handheld gimbal camera for smooth video capture on the go, ideal for vlogging and travel.</p>
+                <p>Cost: $12000/day</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button class="cart-button" onclick="addToCart('DJI Osmo Pocket 3 EOS5', 12000)">
+                    <img src="add_shopping_cart_16dp_0000F5_FILL0_wght400_GRAD0_opsz20.png" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- Repeat similar structure for other products -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Stream.Me Rentals</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
